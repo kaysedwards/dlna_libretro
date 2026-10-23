@@ -1,0 +1,36 @@
+# Core information file for RetroArch.  Copy it next to RetroArch's other
+# .info files (Settings > Directory > Core Info) so the core shows up by
+# name and offers "Start Core" without loading any content.
+
+# Software Information
+display_name = "DLNA (Media Server Browser)"
+authors = ""
+supported_extensions = "dlna|m3u|m3u8|json"
+corename = "DLNA"
+categories = "Media Player"
+license = "See README.md"
+permissions = ""
+display_version = "1.0.0"
+
+# Hardware Information
+manufacturer = "N/A"
+systemname = "DLNA Media Servers"
+systemid = "dlna"
+
+# Libretro Features
+supports_no_game = "true"
+savestate = "true"
+savestate_features = "basic"
+cheats = "false"
+input_descriptors = "true"
+memory_descriptors = "false"
+libretro_saves = "false"
+core_options = "true"
+core_options_version = "2.0"
+load_subsystem = "false"
+hw_render = "false"
+needs_fullpath = "true"
+disk_control = "false"
+is_experimental = "false"
+
+description = "Browse and play video, music and pictures from DLNA / UPnP media servers on your network (MiniDLNA, Jellyfin, Plex, Serviio, ...). Start the core without content to list every server, or open a .dlna file containing a dlna://server/folder/file path."

@@ -1,0 +1,13 @@
+# Build output
+/build/
+/docs/
+*.o
+*.so
+*.dylib
+*.dll
+tools/dlna_harness
+/tools/
+
+# Libraries built by scripts/build-deps.sh
+/deps/build/
+/deps/prefix/

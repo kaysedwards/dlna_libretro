@@ -10,12 +10,15 @@
 [submodule "deps/mbedtls"]
 	path = deps/mbedtls
 	url = https://github.com/Mbed-TLS/mbedtls.git
+	branch = mbedtls-3.6
 [submodule "deps/libsmb2"]
 	path = deps/libsmb2
 	url = https://github.com/sahlberg/libsmb2.git
 [submodule "deps/FFmpeg"]
 	path = deps/FFmpeg
 	url = https://github.com/FFmpeg/FFmpeg.git
+	branch = release/9.0
 [submodule "deps/libssh"]
 	path = deps/libssh
 	url = https://gitlab.com/libssh/libssh-mirror.git
+	branch = stable-0.12

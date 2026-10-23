@@ -117,6 +117,9 @@ fi
 # ---------------------------------------------------------------------
 # libsmb2: SMB2/SMB3 shares.  Built without Kerberos: password (NTLM)
 # logins still work, and the core does not drag in the Kerberos libraries.
+# Built without SMB Direct (SMB over RDMA network hardware) too, which
+# libsmb2 otherwise builds in whenever rdma-core is installed, leaving the
+# core with links to librdmacm and libibverbs it cannot resolve.
 
 if want libsmb2 libsmb2; then
    need libsmb2 CMakeLists.txt
@@ -131,7 +134,8 @@ if want libsmb2 libsmb2; then
       -DCMAKE_DISABLE_FIND_PACKAGE_LibKrb5=ON \
       -DCMAKE_DISABLE_FIND_PACKAGE_GSSAPI=ON \
       -DHAVE_LIBKRB5=0 \
-      -DHAVE_GSSAPI_GSSAPI_H=0
+      -DHAVE_GSSAPI_GSSAPI_H=0 \
+      -DENABLE_RDMA=OFF
    cmake --build "$BUILD/libsmb2" --parallel "$JOBS"
    cmake --install "$BUILD/libsmb2"
 fi

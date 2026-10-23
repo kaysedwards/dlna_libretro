@@ -8,7 +8,7 @@ authors = ""
 supported_extensions = "dlna|m3u|m3u8|json"
 corename = "DLNA"
 categories = "Media Player"
-license = "See README.md"
+license = "LGPLv3"
 permissions = ""
 display_version = "1.0.0"
 
